@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Bank</string>
-    <string name="title_main_menu">Bank</string>
+    <string name="app_name">Mobile-Bank</string>
 
     <!-- Страница авторизации -->
     <string name="login_button">Вход</string>
