@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Bank</string>
+    <string name="title_main_menu">Bank</string>
+
+    <!-- Страница авторизации -->
+    <string name="login_button">Вход</string>
+    <string name="login_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
+
+    <!-- Нижняя панель навигации в главном меню -->
+    <string name="main_tab_home">Главная</string>
+    <string name="main_tab_payment">Платежи</string>
+    <string name="main_tab_history">История</string>
+    <string name="main_tab_additional">Ещё</string>
+
+    <!-- ~Счета и вклады на главной странице -->
+    <string name="card_title_example">Карта</string>
+    <string name="deposit_title_example">Вклад</string>
+    <string name="ruble_symbol">₽</string>
+
+    <!-- Страница карты - панель навигации -->
+    <string name="card_actions">Карта</string>
+    <string name="card_history">История</string>
+    <string name="card_settings">Настройки</string>
+
+    <!-- Страница карты - действия с картой -->
+    <string name="card_actions_send">Перевести</string>
+    <string name="card_actions_replenish">Пополнить</string>
+    <string name="card_actions_info">Реквизиты</string>
+    <string name="card_actions_block">Заблокировать</string>
+
+    <!-- Меню денежных переводов (с карты) -->
+    <string name="payment_menu_between_your_accounts">Между своими счетами</string>
+    <string name="payment_menu_c2c">С карты на карту</string>
+
+</resources>

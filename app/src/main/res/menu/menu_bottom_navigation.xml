@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_menu_home"
+        android:title="@string/main_tab_home"/>
+    <item
+        android:id="@+id/action_payment"
+        android:icon="@drawable/ic_menu_payment"
+        android:title="@string/main_tab_payment" />
+    <item
+        android:id="@+id/action_history"
+        android:icon="@drawable/ic_menu_history"
+        android:title="@string/main_tab_history" />
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_menu_additional"
+        android:title="@string/main_tab_additional" />
+</menu>
