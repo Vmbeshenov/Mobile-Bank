@@ -1,4 +1,4 @@
-package com.vmbeshenov.bank
+package com.vmbeshenov.bank.CardAccount.PaymentMenu
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.EditText
 import com.vmbeshenov.bank.MainMenu.MainActivity
+import com.vmbeshenov.bank.R
 import com.vmbeshenov.bank.TempData.CardAccounts
 
 class PaymentBetweenActivity : AppCompatActivity() {

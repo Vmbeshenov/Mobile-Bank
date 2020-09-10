@@ -1,4 +1,4 @@
-package com.vmbeshenov.bank
+package com.vmbeshenov.bank.CardAccount
 
 import android.os.Bundle
 import android.support.design.widget.TabLayout
@@ -10,7 +10,10 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.TextView
+import com.vmbeshenov.bank.R
 import com.vmbeshenov.bank.TempData.CardAccounts
+import kotlin.math.floor
+import kotlin.math.roundToInt
 
 class CardAccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,17 +24,17 @@ class CardAccountActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayShowTitleEnabled(false)
         val actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
-        val bank_acc_Id = intent.extras!![EXTRA_BANK_ACC_ID] as Int
-        val textView_title_sum = findViewById<View>(R.id.card_sum_text) as TextView
-        val textView_title_sum_small = findViewById<View>(R.id.card_sum_small_text) as TextView
-        var balance_temp = Math.floor(CardAccounts.account[bank_acc_Id].balance).toLong()
-        textView_title_sum.text = String.format("%, d", balance_temp)
-        balance_temp = Math.round(CardAccounts.account[bank_acc_Id].balance % 1 * 100)
-        var balance_str = ","
-        balance_str += java.lang.Long.toString(balance_temp)
-        textView_title_sum_small.text = balance_str
-        val textView_toolbar_title = findViewById<View>(R.id.toolbar_title) as TextView
-        textView_toolbar_title.text = CardAccounts.account[bank_acc_Id].name_card
+        val bankAccId = intent.extras!![EXTRA_BANK_ACC_ID] as Int
+        val textViewTitleSum = findViewById<View>(R.id.card_sum_text) as TextView
+        val textViewTitleSumSmall = findViewById<View>(R.id.card_sum_small_text) as TextView
+        var balanceTemp = floor(CardAccounts.account[bankAccId].balance).toLong()
+        textViewTitleSum.text = String.format("%, d", balanceTemp)
+        balanceTemp = (CardAccounts.account[bankAccId].balance % 1 * 100).roundToInt().toLong()
+        var balanceStr = ","
+        balanceStr += balanceTemp.toString()
+        textViewTitleSumSmall.text = balanceStr
+        val textViewToolbarTitle = findViewById<View>(R.id.toolbar_title) as TextView
+        textViewToolbarTitle.text = CardAccounts.account[bankAccId].name_card
 
         //Связывание SectionsPagerAdapter с ViewPager
         val pagerAdapter = SectionsPagerAdapter(supportFragmentManager)

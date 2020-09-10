@@ -15,11 +15,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun onClickAuthorization(view: View?) {
-        val login_text = findViewById<View>(R.id.login_text) as EditText
-        val login = login_text.text.toString()
-        val password_text = findViewById<View>(R.id.password_text) as EditText
-        val password = password_text.text.toString()
-        if (UserAccountControl.CheckUser(login, password)) {
+        val loginText = findViewById<View>(R.id.login_text) as EditText
+        val login = loginText.text.toString()
+        val passwordText = findViewById<View>(R.id.password_text) as EditText
+        val password = passwordText.text.toString()
+        if (UserAccountControl.checkUser(login, password)) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

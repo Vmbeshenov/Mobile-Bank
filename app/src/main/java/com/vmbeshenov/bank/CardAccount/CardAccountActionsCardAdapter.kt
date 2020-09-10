@@ -1,4 +1,4 @@
-package com.vmbeshenov.bank
+package com.vmbeshenov.bank.CardAccount
 
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.CardView
@@ -8,7 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.vmbeshenov.bank.CardAccountActionsCardAdapter.ViewHolderPayment
+import com.vmbeshenov.bank.CardAccount.CardAccountActionsCardAdapter.ViewHolderPayment
+import com.vmbeshenov.bank.R
 
 internal class CardAccountActionsCardAdapter(private val id_card_view_payment: IntArray, private val title_card_view_payment: IntArray, private val id_image_card_view_payment: IntArray, private val color_card_view_payment: IntArray) : RecyclerView.Adapter<ViewHolderPayment>() {
     private var listener_payment: Listener? = null

@@ -1,4 +1,6 @@
-package com.vmbeshenov.bank
+package com.vmbeshenov.bank.CardAccount
+
+import com.vmbeshenov.bank.R
 
 class DataCardViewPayment private constructor(val id_card_view_payment: Int, val title_card_view_payment: Int, val id_image_card_view_payment: Int, val color_card_view_payment: Int) {
 

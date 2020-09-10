@@ -1,4 +1,4 @@
-package com.vmbeshenov.bank
+package com.vmbeshenov.bank.CardAccount.PaymentMenu
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.vmbeshenov.bank.CardAccount.CardAccountActionsCardAdapter
+import com.vmbeshenov.bank.CardAccount.DataCardViewPayment
 import com.vmbeshenov.bank.MainMenu.MainActivity
+import com.vmbeshenov.bank.R
 
 class PaymentMenuFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

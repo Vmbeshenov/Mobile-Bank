@@ -11,11 +11,11 @@ import com.vmbeshenov.bank.R
 
 class MainHomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view_home_fragment = inflater.inflate(R.layout.fragment_main_home, container, false)
-        val toolbar_main_home = view_home_fragment.findViewById<View>(R.id.toolbar_main_home) as Toolbar
-        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar_main_home)
+        val viewHomeFragment = inflater.inflate(R.layout.fragment_main_home, container, false)
+        val toolbarMainHome = viewHomeFragment.findViewById<View>(R.id.toolbar_main_home) as Toolbar
+        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbarMainHome)
         loadFragment(MainHomeListFragment.newInstance())
-        return view_home_fragment
+        return viewHomeFragment
     }
 
     //Загрузка фрагмента

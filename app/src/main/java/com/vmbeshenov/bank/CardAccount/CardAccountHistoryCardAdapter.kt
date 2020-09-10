@@ -1,4 +1,4 @@
-package com.vmbeshenov.bank
+package com.vmbeshenov.bank.CardAccount
 
 import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
@@ -6,7 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.vmbeshenov.bank.CardAccountHistoryCardAdapter.ViewHolder_CardAccHistory
+import com.vmbeshenov.bank.CardAccount.CardAccountHistoryCardAdapter.ViewHolder_CardAccHistory
+import com.vmbeshenov.bank.R
 
 internal class CardAccountHistoryCardAdapter(private val sum: DoubleArray, private val category: Array<String?>, private val title_operation: Array<String?>, private val date_operation: Array<String?>) : RecyclerView.Adapter<ViewHolder_CardAccHistory>() {
     private var listener_history: Listener? = null

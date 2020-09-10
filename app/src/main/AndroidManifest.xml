@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_bank_dark_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PaymentBetweenActivity"
-            android:parentActivityName=".PaymentMenuActivity"
+        <activity android:name=".CardAccount.PaymentMenu.PaymentBetweenActivity"
+            android:parentActivityName=".CardAccount.PaymentMenu.PaymentMenuActivity"
             />
         <activity
-            android:name=".PaymentMenuActivity"
+            android:name=".CardAccount.PaymentMenu.PaymentMenuActivity"
             android:parentActivityName=".MainMenu.MainActivity" />
         <activity
-            android:name=".CardAccountActivity"
+            android:name=".CardAccount.CardAccountActivity"
             android:parentActivityName=".MainMenu.MainActivity" />
         <activity android:name=".Authorization.LoginActivity">
             <intent-filter>

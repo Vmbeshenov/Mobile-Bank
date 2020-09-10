@@ -9,59 +9,59 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.vmbeshenov.bank.Authorization.LoginActivity
-import com.vmbeshenov.bank.CardAccountActivity
+import com.vmbeshenov.bank.CardAccount.CardAccountActivity
 import com.vmbeshenov.bank.R
 import com.vmbeshenov.bank.TempData.CardAccounts
 import com.vmbeshenov.bank.TempData.Deposits
 
 class MainHomeListFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val card_account_Recycler = inflater.inflate(
+        val cardAccountRecycler = inflater.inflate(
                 R.layout.fragment_main_home_list, container, false) as RecyclerView
 
         //Список карточных счетов
-        val id_card = IntArray(CardAccounts.account.size)
-        for (i in id_card.indices) {
-            id_card[i] = CardAccounts.account[i].id_card
+        val idCard = IntArray(CardAccounts.account.size)
+        for (i in idCard.indices) {
+            idCard[i] = CardAccounts.account[i].id_card
         }
-        val card_names = arrayOfNulls<String>(CardAccounts.account.size)
-        for (i in card_names.indices) {
-            card_names[i] = CardAccounts.account[i].name_card
+        val cardNames = arrayOfNulls<String>(CardAccounts.account.size)
+        for (i in cardNames.indices) {
+            cardNames[i] = CardAccounts.account[i].name_card
         }
-        val card_balance = DoubleArray(CardAccounts.account.size)
-        for (i in card_balance.indices) {
-            card_balance[i] = CardAccounts.account[i].balance
+        val cardBalance = DoubleArray(CardAccounts.account.size)
+        for (i in cardBalance.indices) {
+            cardBalance[i] = CardAccounts.account[i].balance
         }
-        val ic_images = IntArray(CardAccounts.account.size)
-        for (i in ic_images.indices) {
-            ic_images[i] = CardAccounts.account[i].id_image
+        val icImages = IntArray(CardAccounts.account.size)
+        for (i in icImages.indices) {
+            icImages[i] = CardAccounts.account[i].id_image
         }
 
         //Список вкладов
-        val id_deposit = IntArray(Deposits.deposits.size)
-        for (i in id_deposit.indices) {
-            id_deposit[i] = Deposits.deposits[i].id_deposit
+        val idDeposit = IntArray(Deposits.deposits.size)
+        for (i in idDeposit.indices) {
+            idDeposit[i] = Deposits.deposits[i].id_deposit
         }
-        val deposit_name = arrayOfNulls<String>(Deposits.deposits.size)
-        for (i in deposit_name.indices) {
-            deposit_name[i] = Deposits.deposits[i].deposit_name
+        val depositName = arrayOfNulls<String>(Deposits.deposits.size)
+        for (i in depositName.indices) {
+            depositName[i] = Deposits.deposits[i].deposit_name
         }
-        val deposit_balance = DoubleArray(Deposits.deposits.size)
-        for (i in deposit_balance.indices) {
-            deposit_balance[i] = Deposits.deposits[i].deposit_balance
+        val depositBalance = DoubleArray(Deposits.deposits.size)
+        for (i in depositBalance.indices) {
+            depositBalance[i] = Deposits.deposits[i].deposit_balance
         }
-        val deposit_id_image = IntArray(Deposits.deposits.size)
-        for (i in deposit_id_image.indices) {
-            deposit_id_image[i] = Deposits.deposits[i].deposit_id_image
+        val depositIdImage = IntArray(Deposits.deposits.size)
+        for (i in depositIdImage.indices) {
+            depositIdImage[i] = Deposits.deposits[i].deposit_id_image
         }
-        val adapter_main_home_list = MainHomeListAdapter(id_card, card_names, card_balance, ic_images,
-                id_deposit, deposit_name, deposit_balance, deposit_id_image)
-        card_account_Recycler.adapter = adapter_main_home_list
-        val layoutManager_main_home_list = LinearLayoutManager(activity)
-        card_account_Recycler.layoutManager = layoutManager_main_home_list
-        adapter_main_home_list.setListener(object : MainHomeListAdapter.Listener {
+        val adapterMainHomeList = MainHomeListAdapter(idCard, cardNames, cardBalance, icImages,
+                idDeposit, depositName, depositBalance, depositIdImage)
+        cardAccountRecycler.adapter = adapterMainHomeList
+        val layoutManagerMainHomeList = LinearLayoutManager(activity)
+        cardAccountRecycler.layoutManager = layoutManagerMainHomeList
+        adapterMainHomeList.setListener(object : MainHomeListAdapter.Listener {
             override fun onClick(position: Int) {
-                if (position > id_card.size) {
+                if (position > idCard.size) {
                     val intent = Intent(activity, LoginActivity::class.java)
                     activity!!.startActivity(intent)
                 } else {
@@ -71,7 +71,7 @@ class MainHomeListFragment : Fragment() {
                 }
             }
         })
-        return card_account_Recycler
+        return cardAccountRecycler
     }
 
     companion object {

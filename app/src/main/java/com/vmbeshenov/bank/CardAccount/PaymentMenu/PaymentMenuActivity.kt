@@ -1,10 +1,11 @@
-package com.vmbeshenov.bank
+package com.vmbeshenov.bank.CardAccount.PaymentMenu
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
+import com.vmbeshenov.bank.R
 
 class PaymentMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
